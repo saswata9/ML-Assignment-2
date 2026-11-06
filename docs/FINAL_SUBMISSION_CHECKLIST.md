@@ -1,8 +1,8 @@
 # Final publication and submission checklist
 
 ## 1. Project validation
-- [x] Five trained model artifacts included in `model/`.
-- [x] Held-out test data included in `test_data.csv` (114 rows).
+- [x] Model-training script creates five trained model artifacts in `model/` on first app launch.
+- [x] Model-training script generates the 114-row held-out `test_data.csv` on first app launch.
 - [x] Metrics saved in `model_comparison.csv`.
 - [x] Streamlit app source included in `app.py`.
 - [x] Dependencies listed in `requirements.txt`.
