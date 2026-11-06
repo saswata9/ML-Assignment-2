@@ -1,0 +1,1 @@
+Model files are generated deterministically on first app launch by train_models.py.
