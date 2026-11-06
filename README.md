@@ -1,7 +1,7 @@
 # Machine Learning Assignment 2 — WDBC Classification
 
 ## a. Problem statement
-Build and compare five supervised classification models to predict whether a breast mass is malignant or benign from digitized features computed from a fine-needle aspirate image. The project also provides a Streamlit application that evaluates the saved models on a labelled test CSV without retraining.
+Build and compare five supervised classification models to predict whether a breast mass is malignant or benign from digitized features computed from a fine-needle aspirate image. The project also provides a Streamlit application to evaluate the models on labelled test data.
 
 ## b. Dataset description
 - **Dataset:** Wisconsin Diagnostic Breast Cancer (WDBC).
@@ -43,14 +43,15 @@ Run locally:
 pip install -r requirements.txt
 streamlit run app.py
 ```
-The app supports labelled CSV upload, comparison of all five saved models, a model-selection dropdown, evaluation metrics, confusion matrix, classification report and downloadable predictions. The uploaded CSV must contain all 30 feature columns and a numeric `target` column encoded as 0 or 1. The app loads saved model artifacts and does not retrain on uploaded test data.
+On first launch, the app runs `train_models.py` if model artifacts are absent. This creates all five saved model files and the 114-row held-out `test_data.csv` using the fixed stratified split (`random_state=42`). The app then loads those artifacts and supports labelled CSV upload, comparison of all five models, a model-selection dropdown, six evaluation metrics, confusion matrix, classification report and downloadable predictions.
+
+The uploaded CSV must contain all 30 feature columns and a numeric `target` column encoded as 0 or 1. The included generated `test_data.csv` is a valid example after the first launch.
 
 ## Reproducibility
-To retrain the models and regenerate the held-out test CSV:
+To train the models and generate the held-out test CSV manually:
 ```bash
 python train_models.py
 ```
-This uses a stratified split with `random_state=42`.
 
 ## Important notes
 - Streamlit public URL will be added only after actual deployment.
