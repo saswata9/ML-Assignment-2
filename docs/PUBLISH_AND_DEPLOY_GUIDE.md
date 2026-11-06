@@ -4,7 +4,7 @@
 The project repository is:
 https://github.com/saswata9/ML-Assignment-2
 
-The repository uses the `main` branch. The project files are committed there.
+The repository uses the `main` branch. The source code, documentation, dependencies, and metrics CSV are committed there. The app generates the five model artifacts and held-out test CSV on first launch via `train_models.py`.
 
 ## Deploy to Streamlit Community Cloud
 1. Sign in to Streamlit Community Cloud using the GitHub account that owns this repository.
@@ -21,7 +21,7 @@ Official deployment guide: https://docs.streamlit.io/deploy/streamlit-community-
 Open and run the project in the actual BITS Virtual Lab environment required by the assignment. Capture a screenshot of the real running application and results. Do not use a fabricated or mock screenshot. Add the screenshot to the final submission according to the course instructions.
 
 ## Final verification
-- [x] GitHub repository contains the project files and saved model artifacts.
+- [x] GitHub repository contains the source code, documentation, and reproducible model-training script.
 - [ ] Streamlit app URL opens without an error.
 - [ ] Uploading `test_data.csv` returns metrics and predictions.
 - [ ] README contains the actual Streamlit URL.
