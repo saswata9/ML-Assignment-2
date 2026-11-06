@@ -21,6 +21,13 @@ MODEL_FILES = {
     "Support Vector Machine": "support_vector_machine.joblib",
 }
 ROOT = os.path.dirname(__file__)
+MODEL_DIR = os.path.join(ROOT, "model")
+# GitHub does not store generated binary artifacts in this source-first repo.
+# On first launch, train_models.py deterministically creates the five models
+# and the held-out test_data.csv using the documented random seed.
+if not all(os.path.exists(os.path.join(MODEL_DIR, filename)) for filename in MODEL_FILES.values()):
+    import train_models  # noqa: F401
+
 FEATURES = [
     "mean radius","mean texture","mean perimeter","mean area","mean smoothness",
     "mean compactness","mean concavity","mean concave points","mean symmetry","mean fractal dimension",
