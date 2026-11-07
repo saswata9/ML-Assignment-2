@@ -54,6 +54,6 @@ python train_models.py
 ```
 
 ## Important notes
-- Streamlit public URL will be added only after actual deployment.
+- **Streamlit app URL (provided by project owner; live functionality not independently verified):** https://ml-assignment-2-9aiqma63hfrkruo7ghjgev.streamlit.app/
 - The BITS Virtual Lab screenshot must be captured by the student in the actual lab environment; no substitute or fabricated screenshot is included.
 - This is an educational ML exercise, not a medical diagnostic tool.
